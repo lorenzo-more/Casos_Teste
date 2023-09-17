@@ -31,14 +31,14 @@ public class BarcaTest {
     }
 
 
-    // 100- assento livre
+    // primeiros 100 assento livre
     @teste
     public void filaSub20Livre() {
         int result = barca.ocupaLugar("F01A01");
         Assertions.assertEquals(3, result);
     }
 
-     // 100- assento ocupado
+     // primeiros 100 assento ocupado
     @teste
     public void filaSub20Ocupado() {
         barca.ocupaLugar("F01A01");
@@ -46,7 +46,7 @@ public class BarcaTest {
         Assertions.assertEquals(1, result);
     }
 
-    // 100- fila desrrespeita balanceamento de peso
+    // primeiros 100 fila desrrespeita distribuicao de peso
     @teste
     public void filaPos20Livre() {
         int result = barca.ocupaLugar("F21A01");
@@ -69,7 +69,7 @@ public class BarcaTest {
     }
 
     
-    // 100+ assento livre
+    // primeiros 200 assento livre
     @teste
     public void filaPos40Livre() {
         popular100(barca);
@@ -77,7 +77,7 @@ public class BarcaTest {
         Assertions.assertEquals(3, result);
     }
 
-    // 100+ assento ocupado
+    // primeiros 200 assento ocupado
     @teste
     public void filPos40Ocupado() {
         popular100(barca);
@@ -86,7 +86,7 @@ public class BarcaTest {
         Assertions.assertEquals(1, result);
     }
 
-    // 100+ desrrespeita balanceamento de peso
+    // primeiros 200 desrrespeita balanceamento de peso
     @teste
     public void filaSub40Livre() {
         popular100(barca);
