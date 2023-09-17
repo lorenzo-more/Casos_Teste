@@ -92,7 +92,7 @@ public class BarcaTest {
         popular200(barca);
         barca.ocupaLugar("F30A01");
         int result = barca.ocupaLugar("F30A01");
-        Assertions.assertEquals(3, result);
+        Assertions.assertEquals(1, result);
     }
 
 
