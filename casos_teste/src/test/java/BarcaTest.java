@@ -62,6 +62,54 @@ public class BarcaTest {
         Assertions.assertEquals(2, result);
     }
 
+    
+    // 100 segintes
+    @teste
+    public void filaPos40Livre() {
+        int result = barca.ocupaLugar("F40A01");
+        Assertions.assertEquals(3, result);
+    }
 
+    @teste
+    public void filPos40Ocupado() {
+        barca.ocupaLugar("F41A01");
+        int result = barca.ocupaLugar("F41A01");
+        Assertions.assertEquals(1, result);
+    }
+
+    @teste
+    public void filaPos20Livre() {
+        int result = barca.ocupaLugar("F21A01");
+        Assertions.assertEquals(2, result);
+    }
+
+    @teste
+    public void filaPos20Ocupado() {
+        barca.ocupaLugar("F21A01");
+        int result = barca.ocupaLugar("F21A01");
+        Assertions.assertEquals(2, result);
+    }
+
+    @teste
+    public void filaPos40() {
+        int result = barca.ocupaLugar("F41A01");
+        Assertions.assertEquals(2, result);
+    }
+
+    private void popular100(Barca b) {
+        for (int i=1; i<=5; i++) {
+            for (int j=1; j<=20; j++) {
+                ocupaLugarSemVerificacao(i, j);
+            }
+        }
+    }
+
+    private void popular200(Barca b) {
+        for (int i=1; i<=10; i++) {
+            for (int j=1; j<=20; j++) {
+                ocupaLugarSemVerificacao(i, j);
+            }
+        }
+    }
 
 }
