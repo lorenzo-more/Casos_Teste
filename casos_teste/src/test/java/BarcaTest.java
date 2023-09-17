@@ -56,7 +56,7 @@ public class BarcaTest {
     // primeiros 200 assento livre
     @teste
     public void filaPos40Livre() {
-        popular100(barca);
+        popular100();
         int result = barca.ocupaLugar("F40A01");
         Assertions.assertEquals(3, result);
     }
@@ -64,7 +64,7 @@ public class BarcaTest {
     // primeiros 200 assento ocupado
     @teste
     public void filPos40Ocupado() {
-        popular100(barca);
+        popular100();
         barca.ocupaLugar("F41A01");
         int result = barca.ocupaLugar("F41A01");
         Assertions.assertEquals(1, result);
@@ -73,7 +73,7 @@ public class BarcaTest {
     // primeiros 200 desrrespeita balanceamento de peso
     @teste
     public void filaSub40Livre() {
-        popular100(barca);
+        popular100();
         int result = barca.ocupaLugar("F30A01");
         Assertions.assertEquals(2, result);
     }
@@ -81,7 +81,7 @@ public class BarcaTest {
     // demais passageiros assento livre
     @teste
     public void assentoLivre() {
-        popular200(barca);
+        popular200();
         int result = barca.ocupaLugar("F30A01");
         Assertions.assertEquals(3, result);
     }
@@ -89,7 +89,7 @@ public class BarcaTest {
     // demais passageiros assento ocupado
     @teste
     public void assentoOcupado() {
-        popular200(barca);
+        popular200();
         barca.ocupaLugar("F30A01");
         int result = barca.ocupaLugar("F30A01");
         Assertions.assertEquals(1, result);
@@ -98,18 +98,18 @@ public class BarcaTest {
 
 
     // métodos auxiliares
-    private void popular100(Barca b) {
+    private void popular100() {
         for (int i=1; i<=5; i++) {
             for (int j=1; j<=20; j++) {
-                ocupaLugarSemVerificacao(i, j);
+                barca.ocupaLugarSemVerificacao(i, j);
             }
         }
     }
 
-    private void popular200(Barca b) {
+    private void popular200() {
         for (int i=1; i<=10; i++) {
             for (int j=1; j<=20; j++) {
-                ocupaLugarSemVerificacao(i, j);
+                barca.ocupaLugarSemVerificacao(i, j);
             }
         }
     }
