@@ -10,21 +10,21 @@ public class BarcaTest {
     private Barca barca = new Barca();
 
     // assento não existe
-    @teste
+    @Test
     public void assentoInvalido() {
         int result = barca.ocupaLugar("F20A21");
         Assertions.assertEquals(0, result);
     }
 
     // fila não exite
-    @teste
+    @Test
     public void filaInvalida() {
         int result = barca.ocupaLugar("F70A12");
         Assertions.assertEquals(0, result);
     }
 
     // entrada incorreta
-    @teste
+    @Test
     public void entradaInvalida() {
         int result = barca.ocupaLugar("A12F02");
         Assertions.assertEquals(0, result);
@@ -32,14 +32,14 @@ public class BarcaTest {
 
 
     // primeiros 100 assento livre
-    @teste
+    @Test
     public void filaSub20Livre() {
         int result = barca.ocupaLugar("F01A01");
         Assertions.assertEquals(3, result);
     }
 
      // primeiros 100 assento ocupado
-    @teste
+    @Test
     public void filaSub20Ocupado() {
         barca.ocupaLugar("F01A01");
         int result = barca.ocupaLugar("F01A01");
@@ -47,14 +47,14 @@ public class BarcaTest {
     }
 
     // primeiros 100 fila desrrespeita distribuicao de peso
-    @teste
+    @Test
     public void filaPos20Livre() {
         int result = barca.ocupaLugar("F21A01");
         Assertions.assertEquals(2, result);
     }
     
     // primeiros 200 assento livre
-    @teste
+    @Test
     public void filaPos40Livre() {
         popular100();
         int result = barca.ocupaLugar("F40A01");
@@ -62,7 +62,7 @@ public class BarcaTest {
     }
 
     // primeiros 200 assento ocupado
-    @teste
+    @Test
     public void filPos40Ocupado() {
         popular100();
         barca.ocupaLugar("F41A01");
@@ -71,7 +71,7 @@ public class BarcaTest {
     }
 
     // primeiros 200 desrrespeita balanceamento de peso
-    @teste
+    @Test
     public void filaSub40Livre() {
         popular100();
         int result = barca.ocupaLugar("F30A01");
@@ -79,7 +79,7 @@ public class BarcaTest {
     }
 
     // demais passageiros assento livre
-    @teste
+    @Test
     public void assentoLivre() {
         popular200();
         int result = barca.ocupaLugar("F30A01");
@@ -87,15 +87,13 @@ public class BarcaTest {
     }
 
     // demais passageiros assento ocupado
-    @teste
+    @Test
     public void assentoOcupado() {
         popular200();
         barca.ocupaLugar("F30A01");
         int result = barca.ocupaLugar("F30A01");
         Assertions.assertEquals(1, result);
     }
-
-
 
     // métodos auxiliares
     private void popular100() {
