@@ -28,5 +28,40 @@ public class BarcaTest {
         Assertions.assertEquals(0, result);
     }
 
-    
+
+    // primeiros 100
+    @teste
+    public void filaSub20Livre() {
+        int result = barca.ocupaLugar("F01A01");
+        Assertions.assertEquals(3, result);
+    }
+
+    @teste
+    public void filaSub20Ocupado() {
+        barca.ocupaLugar("F01A01");
+        int result = barca.ocupaLugar("F01A01");
+        Assertions.assertEquals(1, result);
+    }
+
+    @teste
+    public void filaPos20Livre() {
+        int result = barca.ocupaLugar("F21A01");
+        Assertions.assertEquals(2, result);
+    }
+
+    @teste
+    public void filaPos20Ocupado() {
+        barca.ocupaLugar("F21A01");
+        int result = barca.ocupaLugar("F21A01");
+        Assertions.assertEquals(2, result);
+    }
+
+    @teste
+    public void filaPos40() {
+        int result = barca.ocupaLugar("F41A01");
+        Assertions.assertEquals(2, result);
+    }
+
+
+
 }
