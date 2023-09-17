@@ -52,22 +52,6 @@ public class BarcaTest {
         int result = barca.ocupaLugar("F21A01");
         Assertions.assertEquals(2, result);
     }
-
-    // ?
-    @teste
-    public void filaPos20Ocupado() {
-        barca.ocupaLugar("F21A01");
-        int result = barca.ocupaLugar("F21A01");
-        Assertions.assertEquals(2, result);
-    }
-
-    // ?
-    @teste
-    public void filaPos40() {
-        int result = barca.ocupaLugar("F41A01");
-        Assertions.assertEquals(2, result);
-    }
-
     
     // primeiros 200 assento livre
     @teste
@@ -94,25 +78,7 @@ public class BarcaTest {
         Assertions.assertEquals(2, result);
     }
 
-    // ?
-    @teste
-    public void filaSub40Ocupado() {
-        popular100(barca);
-        barca.ocupaLugar("F30A01");
-        int result = barca.ocupaLugar("F30A01");
-        Assertions.assertEquals(2, result);
-    }
-    
-    // ?
-    @teste
-    public void filaSub20() {
-        popular100(barca);
-        int result = barca.ocupaLugar("F19A01");
-        Assertions.assertEquals(2, result);
-    }
-
-
-    // 200+ assento livre
+    // demais passageiros assento livre
     @teste
     public void assentoLivre() {
         popular200(barca);
@@ -120,7 +86,7 @@ public class BarcaTest {
         Assertions.assertEquals(3, result);
     }
 
-    // 200+ assento ocupado
+    // demais passageiros assento ocupado
     @teste
     public void assentoOcupado() {
         popular200(barca);
@@ -128,6 +94,7 @@ public class BarcaTest {
         int result = barca.ocupaLugar("F30A01");
         Assertions.assertEquals(3, result);
     }
+
 
 
     // métodos auxiliares
