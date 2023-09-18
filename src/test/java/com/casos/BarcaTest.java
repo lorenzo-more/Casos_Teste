@@ -15,9 +15,12 @@ import org.junit.jupiter.api.Test;
 // cobertura de código depois de pronto
 
 public class BarcaTest {
+    private Barca barca = null;
     
     @BeforeEach
-    private Barca barca = new Barca();
+    void setUp(){
+        barca = new Barca();
+    }
 
     // assento não existe
     @Test

@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: com.casos.BarcaTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 2, Errors: 6, Skipped: 0, Time elapsed: 0.104 s <<< FAILURE! - in com.casos.BarcaTest
+com.casos.BarcaTest.assentoInvalido  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 21 out of bounds for length 20
+	at com.casos.BarcaTest.assentoInvalido(BarcaTest.java:28)
+
+com.casos.BarcaTest.filaPos40Livre  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popular100(BarcaTest.java:121)
+	at com.casos.BarcaTest.filaPos40Livre(BarcaTest.java:78)
+
+com.casos.BarcaTest.filaSub20Ocupado  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
+	at com.casos.BarcaTest.filaSub20Ocupado(BarcaTest.java:65)
+
+com.casos.BarcaTest.assentoOcupado  Time elapsed: 0 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popular200(BarcaTest.java:129)
+	at com.casos.BarcaTest.assentoOcupado(BarcaTest.java:111)
+
+com.casos.BarcaTest.filaSub40Livre  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popular100(BarcaTest.java:121)
+	at com.casos.BarcaTest.filaSub40Livre(BarcaTest.java:95)
+
+com.casos.BarcaTest.filPos40Ocupado  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popular100(BarcaTest.java:121)
+	at com.casos.BarcaTest.filPos40Ocupado(BarcaTest.java:86)
+
+com.casos.BarcaTest.assentoLivre  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popular200(BarcaTest.java:129)
+	at com.casos.BarcaTest.assentoLivre(BarcaTest.java:103)
+
+com.casos.BarcaTest.filaPos20Livre  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+	at com.casos.BarcaTest.filaPos20Livre(BarcaTest.java:72)
+
