@@ -3,6 +3,16 @@ package com.casos;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+// limites 
+// n de passageiros:
+// on-point <=100 -> 100
+// off-point <100 -> 101
+
+// on-point <=200 -> 200
+// off-point <=200 -> 201
+
+// alterar os testes para parametrizados
+// cobertura de código depois de pronto
 
 public class BarcaTest {
     
