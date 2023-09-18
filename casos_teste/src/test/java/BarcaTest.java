@@ -30,6 +30,12 @@ public class BarcaTest {
         Assertions.assertEquals(0, result);
     }
 
+    // entrada incorreta - digitos
+    @Test
+    public void entradaInvalidaDigitos() {
+        int result = barca.ocupaLugar("F12A2");
+        Assertions.assertEquals(0, result);
+    }
 
     // primeiros 100 assento livre
     @Test
