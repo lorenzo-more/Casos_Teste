@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.casos.BarcaTest" time="0.104" tests="12" errors="6" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.casos.BarcaTest" time="0.38" tests="8" errors="0" skipped="0" failures="4">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/workspace/Casos_Teste/target/test-classes:/workspace/Casos_Teste/target/classes:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/workspace/m2-repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/workspace/m2-repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/workspace/m2-repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/workspace/m2-repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/workspace/m2-repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/workspace/m2-repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/workspace/m2-repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/workspace/m2-repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
-    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
     <property name="os.name" value="Linux"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="/home/gitpod/.sdkman/candidates/java/17.0.8.1-tem/lib"/>
-    <property name="sun.java.command" value="/workspace/Casos_Teste/target/surefire/surefirebooter7641372927852528237.jar /workspace/Casos_Teste/target/surefire 2023-09-18T21-50-31_350-jvmRun1 surefire17282266591817379854tmp surefire_08126303158867820811tmp"/>
+    <property name="sun.boot.library.path" value="/home/gitpod/.sdkman/candidates/java/17.0.8-amzn/lib"/>
+    <property name="sun.java.command" value="/workspace/Casos_Teste/target/surefire/surefirebooter16495189690937124212.jar /workspace/Casos_Teste/target/surefire 2023-09-21T13-32-27_523-jvmRun1 surefire4082882350183074382tmp surefire_015730343123121690608tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspace/Casos_Teste/target/test-classes:/workspace/Casos_Teste/target/classes:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/workspace/m2-repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/workspace/m2-repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/workspace/m2-repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/workspace/m2-repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/workspace/m2-repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/workspace/m2-repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/workspace/m2-repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/workspace/m2-repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/workspace/m2-repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/gitpod"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2023-08-24"/>
-    <property name="java.home" value="/home/gitpod/.sdkman/candidates/java/17.0.8.1-tem"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/home/gitpod/.sdkman/candidates/java/17.0.8-amzn"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/workspace/Casos_Teste"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/workspace/Casos_Teste/target/surefire/surefirebooter7641372927852528237.jar"/>
+    <property name="surefire.real.class.path" value="/workspace/Casos_Teste/target/surefire/surefirebooter16495189690937124212.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.8.1+1"/>
+    <property name="java.runtime.version" value="17.0.8+7-LTS"/>
     <property name="user.name" value="gitpod"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="6.1.44-060144-generic"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="Temurin-17.0.8.1+1"/>
+    <property name="java.vendor.version" value="Corretto-17.0.8.7.1"/>
     <property name="localRepository" value="/workspace/m2-repository"/>
-    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="java.version" value="17.0.8.1"/>
+    <property name="java.version" value="17.0.8"/>
     <property name="user.dir" value="/workspace/Casos_Teste"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.vendor" value="Eclipse Adoptium"/>
-    <property name="java.vm.version" value="17.0.8.1+1"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.8+7-LTS"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="filaInvalida" classname="com.casos.BarcaTest" time="0.051">
+  <testcase name="todosDemais(String, int)[1]" classname="com.casos.BarcaTest" time="0.119">
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/casos/BarcaTest.
 	at org.jacoco.agent.rt.internal_f3994fa.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
@@ -157,52 +157,27 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	... 53 more
 ]]></system-err>
   </testcase>
-  <testcase name="assentoInvalido" classname="com.casos.BarcaTest" time="0.002">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 21 out of bounds for length 20
-	at com.casos.BarcaTest.assentoInvalido(BarcaTest.java:28)
-]]></error>
-  </testcase>
-  <testcase name="filaPos40Livre" classname="com.casos.BarcaTest" time="0.007">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popular100(BarcaTest.java:121)
-	at com.casos.BarcaTest.filaPos40Livre(BarcaTest.java:78)
-]]></error>
-  </testcase>
-  <testcase name="filaSub20Livre" classname="com.casos.BarcaTest" time="0.002"/>
-  <testcase name="filaSub20Ocupado" classname="com.casos.BarcaTest" time="0.005">
+  <testcase name="todosDemais(String, int)[2]" classname="com.casos.BarcaTest" time="0.005">
     <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at com.casos.BarcaTest.filaSub20Ocupado(BarcaTest.java:65)
+	at com.casos.BarcaTest.todosDemais(BarcaTest.java:67)
 ]]></failure>
   </testcase>
-  <testcase name="entradaInvalidaDigitos" classname="com.casos.BarcaTest" time="0.001"/>
-  <testcase name="assentoOcupado" classname="com.casos.BarcaTest" time="0">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popular200(BarcaTest.java:129)
-	at com.casos.BarcaTest.assentoOcupado(BarcaTest.java:111)
-]]></error>
+  <testcase name="primeiros100(String, int)[1]" classname="com.casos.BarcaTest" time="0.002"/>
+  <testcase name="primeiros100(String, int)[2]" classname="com.casos.BarcaTest" time="0.002">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
+	at com.casos.BarcaTest.primeiros100(BarcaTest.java:39)
+]]></failure>
   </testcase>
-  <testcase name="entradaInvalida" classname="com.casos.BarcaTest" time="0.001"/>
-  <testcase name="filaSub40Livre" classname="com.casos.BarcaTest" time="0.001">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popular100(BarcaTest.java:121)
-	at com.casos.BarcaTest.filaSub40Livre(BarcaTest.java:95)
-]]></error>
-  </testcase>
-  <testcase name="filPos40Ocupado" classname="com.casos.BarcaTest" time="0.001">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popular100(BarcaTest.java:121)
-	at com.casos.BarcaTest.filPos40Ocupado(BarcaTest.java:86)
-]]></error>
-  </testcase>
-  <testcase name="assentoLivre" classname="com.casos.BarcaTest" time="0.001">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popular200(BarcaTest.java:129)
-	at com.casos.BarcaTest.assentoLivre(BarcaTest.java:103)
-]]></error>
-  </testcase>
-  <testcase name="filaPos20Livre" classname="com.casos.BarcaTest" time="0.001">
+  <testcase name="primeiros100(String, int)[3]" classname="com.casos.BarcaTest" time="0.001">
     <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
-	at com.casos.BarcaTest.filaPos20Livre(BarcaTest.java:72)
+	at com.casos.BarcaTest.primeiros100(BarcaTest.java:39)
 ]]></failure>
   </testcase>
+  <testcase name="primeiros200(String, int)[1]" classname="com.casos.BarcaTest" time="0.001"/>
+  <testcase name="primeiros200(String, int)[2]" classname="com.casos.BarcaTest" time="0.001">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
+	at com.casos.BarcaTest.primeiros200(BarcaTest.java:53)
+]]></failure>
+  </testcase>
+  <testcase name="primeiros200(String, int)[3]" classname="com.casos.BarcaTest" time="0.001"/>
 </testsuite>

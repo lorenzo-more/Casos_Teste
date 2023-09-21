@@ -1,8 +1,18 @@
 package com.casos;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.stream.Stream;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import net.bytebuddy.asm.Advice.Argument;
+
 // limites 
 // n de passageiros:
 // on-point <=100 -> 100
@@ -22,6 +32,47 @@ public class BarcaTest {
         barca = new Barca();
     }
 
+    @ParameterizedTest
+    @MethodSource
+    void primeiros100(String assento, int Res) {
+        barca.ocupaLugarSemVerificacao(2, 12);
+        assertEquals(Res, barca.ocupaLugar(assento));
+    }
+
+    static Stream<Arguments> primeiros100() {
+        return Stream.of(Arguments.of("F02A11", 3),
+                         Arguments.of("F02A12", 1),
+                         Arguments.of("F30A02", 2));
+    }
+
+    @ParameterizedTest
+    @MethodSource
+    void primeiros200(String assento, int Res) {
+        popular100();
+        barca.ocupaLugarSemVerificacao(41, 11);
+        assertEquals(Res, barca.ocupaLugar(assento));
+    }
+
+    static Stream<Arguments> primeiros200() {
+        return Stream.of(Arguments.of("F41A10", 3),
+                         Arguments.of("F41A11", 1),
+                         Arguments.of("F31A03", 2));
+    }
+
+    @ParameterizedTest
+    @MethodSource
+    void todosDemais(String assento, int Res) {
+        popular200();
+        barca.ocupaLugarSemVerificacao(31, 11);
+        assertEquals(Res, barca.ocupaLugar(assento));
+    }
+
+    static Stream<Arguments> todosDemais() {
+        return Stream.of(Arguments.of("F31A10", 3),
+                         Arguments.of("F31A11", 1));
+    }
+
+    /*
     // assento não existe
     @Test
     public void assentoInvalido() {
@@ -113,19 +164,20 @@ public class BarcaTest {
         int result = barca.ocupaLugar("F30A01");
         Assertions.assertEquals(1, result);
     }
-
+    */
+    
     // métodos auxiliares
     private void popular100() {
-        for (int i=1; i<=5; i++) {
-            for (int j=1; j<=20; j++) {
+        for (int i=0; i<5; i++) {
+            for (int j=0; j<20; j++) {
                 barca.ocupaLugarSemVerificacao(i, j);
             }
         }
     }
 
     private void popular200() {
-        for (int i=1; i<=10; i++) {
-            for (int j=1; j<=20; j++) {
+        for (int i=0; i<10; i++) {
+            for (int j=0; j<20; j++) {
                 barca.ocupaLugarSemVerificacao(i, j);
             }
         }
