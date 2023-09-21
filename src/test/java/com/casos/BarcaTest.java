@@ -183,4 +183,15 @@ public class BarcaTest {
         }
     }
 
+    private void popularn(int n) {
+        for (int i=0; i<(n/20); i++) {
+            for (int j=0; j<20; j++) {
+                barca.ocupaLugarSemVerificacao(i, j);
+            }
+        }
+        for (int i=0; i<(n-n/20); i++) {
+            barca.ocupaLugarSemVerificacao((n/20), i);
+        }
+    }
+
 }
