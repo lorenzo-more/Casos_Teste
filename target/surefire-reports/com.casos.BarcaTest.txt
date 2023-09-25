@@ -1,20 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: com.casos.BarcaTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.38 s <<< FAILURE! - in com.casos.BarcaTest
-com.casos.BarcaTest.todosDemais(String, int)[2]  Time elapsed: 0.005 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at com.casos.BarcaTest.todosDemais(BarcaTest.java:67)
+Tests run: 8, Failures: 0, Errors: 8, Skipped: 0, Time elapsed: 0.3 s <<< FAILURE! - in com.casos.BarcaTest
+com.casos.BarcaTest.limiteNfileira(int, String, int)[1]  Time elapsed: 0.099 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:94)
 
-com.casos.BarcaTest.primeiros100(String, int)[2]  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at com.casos.BarcaTest.primeiros100(BarcaTest.java:39)
+com.casos.BarcaTest.limiteNfileira(int, String, int)[2]  Time elapsed: 0.062 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:94)
 
-com.casos.BarcaTest.primeiros100(String, int)[3]  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
-	at com.casos.BarcaTest.primeiros100(BarcaTest.java:39)
+com.casos.BarcaTest.limiteNfileira(int, String, int)[3]  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:94)
 
-com.casos.BarcaTest.primeiros200(String, int)[2]  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at com.casos.BarcaTest.primeiros200(BarcaTest.java:53)
+com.casos.BarcaTest.limiteNfileira(int, String, int)[4]  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:94)
+
+com.casos.BarcaTest.limiteNpassageiros(int, String, int)[1]  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:78)
+
+com.casos.BarcaTest.limiteNpassageiros(int, String, int)[2]  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:78)
+
+com.casos.BarcaTest.limiteNpassageiros(int, String, int)[3]  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:78)
+
+com.casos.BarcaTest.limiteNpassageiros(int, String, int)[4]  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:133)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:78)
 

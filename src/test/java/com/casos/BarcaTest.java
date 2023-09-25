@@ -41,7 +41,7 @@ public class BarcaTest {
 
     static Stream<Arguments> primeiros100() {
         return Stream.of(Arguments.of("F02A11", 3),
-                         Arguments.of("F02A12", 1),
+                         Arguments.of("F41A02", 2),
                          Arguments.of("F30A02", 2));
     }
 
@@ -55,7 +55,7 @@ public class BarcaTest {
 
     static Stream<Arguments> primeiros200() {
         return Stream.of(Arguments.of("F41A10", 3),
-                         Arguments.of("F41A11", 1),
+                         Arguments.of("F12A03", 2),
                          Arguments.of("F31A03", 2));
     }
 
@@ -72,99 +72,39 @@ public class BarcaTest {
                          Arguments.of("F31A11", 1));
     }
 
-    /*
-    // assento não existe
-    @Test
-    public void assentoInvalido() {
-        int result = barca.ocupaLugar("F20A21");
-        Assertions.assertEquals(0, result);
+    @ParameterizedTest
+    @MethodSource
+    void limiteNpassageiros(int assentosOcupados, String assento, int Res) {
+        popularn(assentosOcupados);
+
+        assertEquals(Res, barca.ocupaLugar(assento));
     }
 
-    // fila não exite
-    @Test
-    public void filaInvalida() {
-        int result = barca.ocupaLugar("F70A12");
-        Assertions.assertEquals(0, result);
+    static Stream<Arguments> limiteNpassageiros() {
+        return Stream.of(Arguments.of(99, "F01A01", 1),
+                         Arguments.of(100, "F01A01", 2),
+                         Arguments.of(199, "F30A01", 2),
+                         Arguments.of(200, "F30A01", 3)            
+                         );
     }
 
-    // entrada incorreta
-    @Test
-    public void entradaInvalida() {
-        int result = barca.ocupaLugar("A12F02");
-        Assertions.assertEquals(0, result);
+    @ParameterizedTest
+    @MethodSource
+    void limiteNfileira(int assentosOcupados, String assento, int Res) {
+        popularn(assentosOcupados);
+
+        assertEquals(Res, barca.ocupaLugar(assento));
     }
 
-    // entrada incorreta - digitos
-    @Test
-    public void entradaInvalidaDigitos() {
-        int result = barca.ocupaLugar("F12A2");
-        Assertions.assertEquals(0, result);
-    }
-
-    // primeiros 100 assento livre
-    @Test
-    public void filaSub20Livre() {
-        int result = barca.ocupaLugar("F01A01");
-        Assertions.assertEquals(3, result);
-    }
-
-     // primeiros 100 assento ocupado
-    @Test
-    public void filaSub20Ocupado() {
-        barca.ocupaLugar("F01A01");
-        int result = barca.ocupaLugar("F01A01");
-        Assertions.assertEquals(1, result);
-    }
-
-    // primeiros 100 fila desrrespeita distribuicao de peso
-    @Test
-    public void filaPos20Livre() {
-        int result = barca.ocupaLugar("F21A01");
-        Assertions.assertEquals(2, result);
+    static Stream<Arguments> limiteNfileira() {
+        return Stream.of(Arguments.of(50, "F20A01", 3),
+                         Arguments.of(50, "F21A01", 2),
+                         Arguments.of(150, "F40A01", 3),
+                         Arguments.of(150, "F39A01", 2)
+                         );
     }
     
-    // primeiros 200 assento livre
-    @Test
-    public void filaPos40Livre() {
-        popular100();
-        int result = barca.ocupaLugar("F40A01");
-        Assertions.assertEquals(3, result);
-    }
 
-    // primeiros 200 assento ocupado
-    @Test
-    public void filPos40Ocupado() {
-        popular100();
-        barca.ocupaLugar("F41A01");
-        int result = barca.ocupaLugar("F41A01");
-        Assertions.assertEquals(1, result);
-    }
-
-    // primeiros 200 desrrespeita balanceamento de peso
-    @Test
-    public void filaSub40Livre() {
-        popular100();
-        int result = barca.ocupaLugar("F30A01");
-        Assertions.assertEquals(2, result);
-    }
-
-    // demais passageiros assento livre
-    @Test
-    public void assentoLivre() {
-        popular200();
-        int result = barca.ocupaLugar("F30A01");
-        Assertions.assertEquals(3, result);
-    }
-
-    // demais passageiros assento ocupado
-    @Test
-    public void assentoOcupado() {
-        popular200();
-        barca.ocupaLugar("F30A01");
-        int result = barca.ocupaLugar("F30A01");
-        Assertions.assertEquals(1, result);
-    }
-    */
     
     // métodos auxiliares
     private void popular100() {
@@ -193,5 +133,7 @@ public class BarcaTest {
             barca.ocupaLugarSemVerificacao((n/20), i);
         }
     }
+
+
 
 }
