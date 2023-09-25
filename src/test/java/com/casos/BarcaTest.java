@@ -22,17 +22,16 @@ import org.junit.jupiter.params.provider.MethodSource;
 // cobertura de código depois de pronto
 
 public class BarcaTest {
-    private Barca barca = null;
+    private BarcaRight barca = null;
     
     @BeforeEach
     void setUp(){
-        barca = new Barca();
+        barca = new BarcaRight();
     }
 
     @ParameterizedTest
     @MethodSource
     void primeiros100(String assento, int Res) {
-        barca.ocupaLugarSemVerificacao(2, 12);
         assertEquals(Res, barca.ocupaLugar(assento));
     }
 
@@ -46,7 +45,6 @@ public class BarcaTest {
     @MethodSource
     void primeiros200(String assento, int Res) {
         popular100();
-        barca.ocupaLugarSemVerificacao(41, 11);
         assertEquals(Res, barca.ocupaLugar(assento));
     }
 
@@ -60,7 +58,7 @@ public class BarcaTest {
     @MethodSource
     void todosDemais(String assento, int Res) {
         popular200();
-        barca.ocupaLugarSemVerificacao(31, 11);
+        barca.ocupaLugarSemVerificacao(30, 10);
         assertEquals(Res, barca.ocupaLugar(assento));
     }
 
@@ -127,7 +125,7 @@ public class BarcaTest {
             }
         }
         for (int i=0; i<(n-n/20); i++) {
-            barca.ocupaLugarSemVerificacao((n/20), i);
+            barca.ocupaLugarSemVerificacao((n/20) + 1, i);
         }
     }
 

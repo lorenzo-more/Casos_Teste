@@ -16,7 +16,7 @@ public class BarcaRight {
     // Ocupa o lugar sem verificação: simplesmente ocupa o lugar sem validar nenhuma das
     // regras de ocupação
     public void ocupaLugarSemVerificacao(int fila, int assento) {
-            lugaresOcupados[fila - 1][assento - 1] = true;
+            lugaresOcupados[fila][assento] = true;
             totalPassageiros++;
     }
 

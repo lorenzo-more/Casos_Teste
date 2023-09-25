@@ -1,21 +1,6 @@
 package com.casos;
 
-<<<<<<< HEAD
-public class Barca {
-    public Barca() {
-    }
-
-    // Método auxiliar projetado para facilitar testes (montagem de cenário)
-    // Ocupa o lugar sem verificação: simplesmente ocupa o lugar sem validar nenhuma
-    // das regras de ocupação
-    public void ocupaLugarSemVerificacao(int fila, int assento) {
-    }
-
-    /*
-     * Retorna:
-=======
 import java.util.regex.Pattern;
-
 public class Barca {
     public static final int ASSENTOS_POR_FILA = 20;
     public static final int FILAS = 60;
@@ -40,16 +25,11 @@ public class Barca {
     }
 
     /*
->>>>>>> bf07b26907894b0e20b49abfb1006d5719e5080a
      * 0 – Identificador de assento inválido
      * 1 – Assento ocupado
      * 2 – Assento bloqueado devido a distribuição de peso
      * 3 – Ok, assento atribuído ao passageiro.
      */
-<<<<<<< HEAD
-    public int ocupaLugar(String assentoInformado) {
-        return -1;
-=======
     public int ocupaLugar(String assentoInformado){
         // Verifica se é um assento valido
         if (Pattern.matches("[F][0-8]{2}[A][0-9]{2}", assentoInformado) == false){
@@ -79,6 +59,5 @@ public class Barca {
         assentos[fila][assento] = true;
         qtdadeAssentosOcupados++;
         return 3;
->>>>>>> bf07b26907894b0e20b49abfb1006d5719e5080a
     }
 }
