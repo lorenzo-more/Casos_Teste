@@ -43,7 +43,7 @@ public class BarcaRight {
             return 1;
         }
 
-        if (totalPassageiros <= 100) {
+        if (totalPassageiros < 100) {
             if (fila >= 1 && fila <= 20) {
                 lugaresOcupados[fila - 1][assento - 1] = true;
                 totalPassageiros++;
@@ -51,7 +51,7 @@ public class BarcaRight {
             } else {
                 return 2;
             }
-        } else if (totalPassageiros <= 200) {
+        } else if (totalPassageiros < 200) {
             if (fila >= 40 && fila <= 60) {
                 lugaresOcupados[fila - 1][assento - 1] = true;
                 totalPassageiros++;

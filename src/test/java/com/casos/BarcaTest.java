@@ -10,17 +10,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 
-// limites 
-// n de passageiros:
-// on-point <=100 -> 100
-// off-point <100 -> 101
-
-// on-point <=200 -> 200
-// off-point <=200 -> 201
-
-// alterar os testes para parametrizados
-// cobertura de código depois de pronto
-
 public class BarcaTest {
     private BarcaRight barca = null;
     
@@ -28,6 +17,20 @@ public class BarcaTest {
     void setUp(){
         barca = new BarcaRight();
     }
+
+
+    @ParameterizedTest
+    @MethodSource
+    void entradasInvalidas(String assento, int Res) {
+        assertEquals(Res, barca.ocupaLugar(assento));
+    }
+
+    static Stream<Arguments> entradasInvalidas() {
+        return Stream.of(Arguments.of("F70A11", 0),
+                         Arguments.of("F30A40", 0),
+                         Arguments.of("A02F03", 0));
+    }
+
 
     @ParameterizedTest
     @MethodSource
@@ -40,6 +43,7 @@ public class BarcaTest {
                          Arguments.of("F41A02", 2),
                          Arguments.of("F30A02", 2));
     }
+
 
     @ParameterizedTest
     @MethodSource
@@ -66,6 +70,24 @@ public class BarcaTest {
         return Stream.of(Arguments.of("F31A10", 3),
                          Arguments.of("F31A11", 1));
     }
+    
+
+
+    @ParameterizedTest
+    @MethodSource
+    void limitesEntradaInvalida(int ocupados, String assento, int Res) {
+        popularn(ocupados);
+        assertEquals(Res, barca.ocupaLugar(assento));
+    }
+
+    static Stream<Arguments> limitesEntradaInvalida() {
+        return Stream.of(Arguments.of(110, "F61A11", 0),
+                         Arguments.of(110, "F60A11", 3),
+                         Arguments.of(0, "F01A21", 0),
+                         Arguments.of(0, "F01A20", 3)
+                         );
+    }
+
 
     @ParameterizedTest
     @MethodSource
@@ -77,7 +99,7 @@ public class BarcaTest {
 
     static Stream<Arguments> limiteNpassageiros() {
         return Stream.of(Arguments.of(99, "F01A01", 1),
-                         Arguments.of(100, "F01A01", 2),
+                         Arguments.of(100, "F20A01", 2),
                          Arguments.of(199, "F30A01", 2),
                          Arguments.of(200, "F30A01", 3)            
                          );
@@ -119,13 +141,13 @@ public class BarcaTest {
     }
 
     private void popularn(int n) {
-        for (int i=0; i<(n/20); i++) {
-            for (int j=0; j<20; j++) {
-                barca.ocupaLugarSemVerificacao(i, j);
-            }
-        }
-        for (int i=0; i<(n-n/20); i++) {
-            barca.ocupaLugarSemVerificacao((n/20) + 1, i);
+        int i = 0;
+        int j = 0;
+        while (n>0) {
+            barca.ocupaLugarSemVerificacao(i, j);
+            j++;
+            n = n-1;
+            if (j==20) {i++; j=0;}
         }
     }
 
