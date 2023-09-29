@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.casos.BarcaTest" time="0.593" tests="16" errors="8" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.casos.BarcaTest" time="0.564" tests="8" errors="8" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-oracle/lib"/>
-    <property name="sun.java.command" value="/home/pole/pucrs/fds/Casos_Teste/target/surefire/surefirebooter5170926777107063149.jar /home/pole/pucrs/fds/Casos_Teste/target/surefire 2023-09-25T18-40-02_656-jvmRun1 surefire16341107265141510336tmp surefire_014903397931044925087tmp"/>
+    <property name="sun.java.command" value="/home/pole/pucrs/fds/Casos_Teste/target/surefire/surefirebooter10044628428889344196.jar /home/pole/pucrs/fds/Casos_Teste/target/surefire 2023-09-25T19-00-25_334-jvmRun1 surefire7145665258553715066tmp surefire_08254679827792634321tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/pole/pucrs/fds/Casos_Teste/target/test-classes:/home/pole/pucrs/fds/Casos_Teste/target/classes:/home/pole/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/pole/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/pole/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/pole/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/pole/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/home/pole/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/home/pole/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/home/pole/.m2/repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/home/pole/.m2/repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/home/pole/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/home/pole/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/pole/pucrs/fds/Casos_Teste/target/surefire/surefirebooter5170926777107063149.jar"/>
+    <property name="surefire.real.class.path" value="/home/pole/pucrs/fds/Casos_Teste/target/surefire/surefirebooter10044628428889344196.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+9-LTS-190"/>
     <property name="user.name" value="pole"/>
@@ -51,7 +51,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="todosDemais(String, int)[1]" classname="com.casos.BarcaTest" time="0.245">
+  <testcase name="limiteNfileira(int, String, int)[1]" classname="com.casos.BarcaTest" time="0.261">
+    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:89)
+]]></error>
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/casos/BarcaTest.
 	at org.jacoco.agent.rt.internal_f3994fa.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
@@ -156,59 +160,46 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	... 53 more
 ]]></system-err>
   </testcase>
-  <testcase name="todosDemais(String, int)[2]" classname="com.casos.BarcaTest" time="0.004"/>
-  <testcase name="limiteNfileira(int, String, int)[1]" classname="com.casos.BarcaTest" time="0.008">
+  <testcase name="limiteNfileira(int, String, int)[2]" classname="com.casos.BarcaTest" time="0.005">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:91)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:89)
 ]]></error>
   </testcase>
-  <testcase name="limiteNfileira(int, String, int)[2]" classname="com.casos.BarcaTest" time="0.003">
+  <testcase name="limiteNfileira(int, String, int)[3]" classname="com.casos.BarcaTest" time="0.004">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:91)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:89)
 ]]></error>
   </testcase>
-  <testcase name="limiteNfileira(int, String, int)[3]" classname="com.casos.BarcaTest" time="0.003">
+  <testcase name="limiteNfileira(int, String, int)[4]" classname="com.casos.BarcaTest" time="0.003">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:91)
-]]></error>
-  </testcase>
-  <testcase name="limiteNfileira(int, String, int)[4]" classname="com.casos.BarcaTest" time="0.004">
-    <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:91)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNfileira(BarcaTest.java:89)
 ]]></error>
   </testcase>
   <testcase name="limiteNpassageiros(int, String, int)[1]" classname="com.casos.BarcaTest" time="0.003">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:75)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:73)
 ]]></error>
   </testcase>
   <testcase name="limiteNpassageiros(int, String, int)[2]" classname="com.casos.BarcaTest" time="0.003">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:75)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:73)
 ]]></error>
   </testcase>
   <testcase name="limiteNpassageiros(int, String, int)[3]" classname="com.casos.BarcaTest" time="0.003">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:75)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:73)
 ]]></error>
   </testcase>
-  <testcase name="limiteNpassageiros(int, String, int)[4]" classname="com.casos.BarcaTest" time="0.002">
+  <testcase name="limiteNpassageiros(int, String, int)[4]" classname="com.casos.BarcaTest" time="0.003">
     <error type="java.lang.ArrayIndexOutOfBoundsException"><![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 20 out of bounds for length 20
-	at com.casos.BarcaTest.popularn(BarcaTest.java:130)
-	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:75)
+	at com.casos.BarcaTest.popularn(BarcaTest.java:128)
+	at com.casos.BarcaTest.limiteNpassageiros(BarcaTest.java:73)
 ]]></error>
   </testcase>
-  <testcase name="primeiros100(String, int)[1]" classname="com.casos.BarcaTest" time="0.002"/>
-  <testcase name="primeiros100(String, int)[2]" classname="com.casos.BarcaTest" time="0.002"/>
-  <testcase name="primeiros100(String, int)[3]" classname="com.casos.BarcaTest" time="0.001"/>
-  <testcase name="primeiros200(String, int)[1]" classname="com.casos.BarcaTest" time="0.002"/>
-  <testcase name="primeiros200(String, int)[2]" classname="com.casos.BarcaTest" time="0.001"/>
-  <testcase name="primeiros200(String, int)[3]" classname="com.casos.BarcaTest" time="0.002"/>
 </testsuite>

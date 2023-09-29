@@ -49,7 +49,7 @@ public class BarcaTest {
     }
 
     static Stream<Arguments> primeiros200() {
-        return Stream.of(Arguments.of("F41A10", 3),
+        return Stream.of(Arguments.of("F41A01", 3),
                          Arguments.of("F12A03", 2),
                          Arguments.of("F31A03", 2));
     }
