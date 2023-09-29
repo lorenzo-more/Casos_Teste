@@ -26,7 +26,9 @@ public class BarcaTest {
     }
 
     static Stream<Arguments> entradasInvalidas() {
-        return Stream.of(Arguments.of("F70A11", 0),
+        return Stream.of(Arguments.of("F00A11", 0),
+                         Arguments.of("F70A11", 0),
+                         Arguments.of("F10A00", 0),
                          Arguments.of("F30A40", 0),
                          Arguments.of("A02F03", 0));
     }
