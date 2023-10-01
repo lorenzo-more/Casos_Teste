@@ -8,4 +8,5 @@ técnica de particionamento. <br>
 “ocupaLugar” com os casos de teste definidos na letra “a”. <br>
 + c. Solicitar para o professor a implementação da classe “Barca”, aplicar o driver de
 teste sobre a mesma e relatar os defeitos encontrados (se houverem). <br>
++ d. Aplicar a técnica de análise cobertura de código e gerar novos casos de teste se houver necessidade.
 
