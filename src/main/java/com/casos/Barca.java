@@ -1,7 +1,6 @@
 package com.casos;
 
 import java.util.regex.Pattern;
-
 public class Barca {
     public static final int ASSENTOS_POR_FILA = 20;
     public static final int FILAS = 60;

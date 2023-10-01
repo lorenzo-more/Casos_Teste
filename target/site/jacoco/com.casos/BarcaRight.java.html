@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BarcaRight.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">casos_teste</a> &gt; <a href="index.source.html" class="el_package">com.casos</a> &gt; <span class="el_source">BarcaRight.java</span></div><h1>BarcaRight.java</h1><pre class="source lang-java linenums">package com.casos;
+
+public class BarcaRight {
+<span class="fc" id="L4">    private boolean[][] lugaresOcupados = new boolean[60][20];</span>
+<span class="fc" id="L5">    private int totalPassageiros = 0;</span>
+
+<span class="fc" id="L7">    public BarcaRight() {</span>
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        for (int i = 0; i &lt; 60; i++) {</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">            for (int j = 0; j &lt; 20; j++) {</span>
+<span class="fc" id="L10">                lugaresOcupados[i][j] = false;</span>
+            }
+        }
+<span class="fc" id="L13">    }</span>
+
+    // Método auxiliar projetado para facilitar testes (montagem de cenário)
+    // Ocupa o lugar sem verificação: simplesmente ocupa o lugar sem validar nenhuma das
+    // regras de ocupação
+    public void ocupaLugarSemVerificacao(int fila, int assento) {
+<span class="fc" id="L19">            lugaresOcupados[fila][assento] = true;</span>
+<span class="fc" id="L20">            totalPassageiros++;</span>
+<span class="fc" id="L21">    }</span>
+
+    /*
+     * * Retorna:
+     * 0 – Identificador de assento inválido
+     * 1 – Assento ocupado
+     * 2 – Assento bloqueado devido a distribuição de peso
+     * 3 – Ok, assento atribuído ao passageiro.
+     */
+    public int ocupaLugar(String assentoInformado) {
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (!assentoInformado.matches(&quot;^F[0-6][0-9]A[0-2][0-9]$&quot;)) {</span>
+<span class="fc" id="L32">            return 0;</span>
+        }
+
+<span class="fc" id="L35">        int fila = Integer.parseInt(assentoInformado.substring(1, 3));</span>
+<span class="fc" id="L36">        int assento = Integer.parseInt(assentoInformado.substring(4, 6));</span>
+
+<span class="fc bfc" id="L38" title="All 8 branches covered.">        if (fila &lt; 1 || fila &gt; 60 || assento &lt; 1 || assento &gt; 20) {</span>
+<span class="fc" id="L39">            return 0;</span>
+        }
+
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (lugaresOcupados[fila - 1][assento - 1]) {</span>
+<span class="fc" id="L43">            return 1;</span>
+        }
+
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (totalPassageiros &lt; 100) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (fila &lt;= 20) {</span>
+<span class="fc" id="L48">                lugaresOcupados[fila - 1][assento - 1] = true;</span>
+<span class="fc" id="L49">                totalPassageiros++;</span>
+<span class="fc" id="L50">                return 3;</span>
+            } else {
+<span class="fc" id="L52">                return 2;</span>
+            }
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        } else if (totalPassageiros &lt; 200) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">            if (fila &gt;= 40) {</span>
+<span class="fc" id="L56">                lugaresOcupados[fila - 1][assento - 1] = true;</span>
+<span class="fc" id="L57">                totalPassageiros++;</span>
+<span class="fc" id="L58">                return 3;</span>
+            } else {
+<span class="fc" id="L60">                return 2;</span>
+            }
+        } else {
+<span class="fc" id="L63">            lugaresOcupados[fila - 1][assento - 1] = true;</span>
+<span class="fc" id="L64">            totalPassageiros++;</span>
+<span class="fc" id="L65">            return 3;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
